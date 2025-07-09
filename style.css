@@ -1,0 +1,90 @@
+
+.hero
+{
+    background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:whitesmoke;
+     content:"";
+     position: absolute;
+     inset-block-start: 0;inset-inline-start: 0;
+     inline-size: 100%; block-size: 100%;
+     background: rgba(0, 0,0,);
+
+     
+}
+.hero::after{
+    text-align: center;
+
+}
+.typesscript{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.content
+{
+    position: relative;
+    z-index: 1;
+
+}
+.btn{
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: aquamarine;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+
+}
+.typesscript{
+    display: inline-block;
+    overflow: hidden;
+    border-inline-end: 0.15em;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing:0.15em ;
+    animation: typing 2s steps(30,end),blink-caret 0.75 step-end infinite;
+
+
+}
+@keyframes typing {
+    from {
+        inline-size: 0;
+    }
+    to {
+        inline-size: 100%;
+    }
+}
+
+.slide {
+    inline-size: 100px;
+    block-size: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    animation:slide-left-right 2s infinite alternate;
+
+@keyframes slide-left-right {
+    0% {
+        inset-inline-start: 0;
+    }
+    100% {
+        inset-inline-start: calc(100% - 100px);
+    }
+}
+}
+@keyframes blink-caret {
+    from, to {
+        border-inline-end-color: transparent;
+    }
+    50% {
+        border-inline-end-color: aquamarine;
+    }
+}
